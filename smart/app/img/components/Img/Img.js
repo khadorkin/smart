@@ -51,7 +51,8 @@ Img.propTypes = {
   videoType: React.PropTypes.string,
   description: React.PropTypes.string,
   title: React.PropTypes.string,
-  src: React.PropTypes.string
+  src: React.PropTypes.string,
+  poster: React.PropTypes.string
 };
 
 export default Img;

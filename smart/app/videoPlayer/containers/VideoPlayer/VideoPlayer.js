@@ -14,7 +14,8 @@ function mapStateToProps(state) {
     dispatch: state.dispatch,
     videoRoute: state.videoPlayer.videoRoute,
     videoType: state.videoPlayer.videoType,
-    videoId: state.videoPlayer.videoId
+    videoId: state.videoPlayer.videoId,
+    poster: state.videoPlayer.poster
   };
 }
 
@@ -105,7 +106,8 @@ class VideoPlayer extends React.Component {
           <img className={styles.mainLogo} src={"http://cdn-lc.gcdn.co/uploads/public/layouts/2015_08_27__12_06_56_WoTX-Xboxlight2-preload-RU/variative_content/RU/header/elements/wot360logo/elements/logo/164296/world-of-tanks-360-edition_1400250758.png"} alt={"World of Tanks"} />
         </h1>
         <div className={styles.mainVideo} >
-          <Video copyKeys={copyKeys} loop mute autoPlay ref={"video"} onProgress={this.onProgress} >
+          <Video copyKeys={copyKeys} loop mute autoPlay ref={"video"}
+                 onProgress={this.onProgress} poster={this.props.poster} >
             <source src={this.props.videoRoute} type={'video/' + this.props.videoType} />
             <Overlay />
             <Controls />
@@ -165,7 +167,8 @@ VideoPlayer.propTypes = {
   videoType: React.PropTypes.string,
   videoId: React.PropTypes.number,
   locales: React.PropTypes.object,
-  dispatch: React.PropTypes.func
+  dispatch: React.PropTypes.func,
+  poster: React.PropTypes.string
 };
 
 const translatedVideoPlayer = translate(['player'])(VideoPlayer);

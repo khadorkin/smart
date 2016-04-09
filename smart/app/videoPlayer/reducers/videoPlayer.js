@@ -8,7 +8,8 @@ const initialState = {
   description: '',
   title: '',
   display: 'none',
-  added: false
+  added: false,
+  poster: ''
 };
 
 export default function changeRef(state = initialState, action = {}) {
@@ -21,7 +22,8 @@ export default function changeRef(state = initialState, action = {}) {
         description: action.description,
         title: action.title,
         display: action.display,
-        added: action.added
+        added: action.added,
+        poster: action.poster
       });
     }
     case 'videoId': {

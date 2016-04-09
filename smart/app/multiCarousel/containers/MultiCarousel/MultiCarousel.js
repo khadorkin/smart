@@ -30,7 +30,8 @@ class MultiCarousel extends Component {
           {Object.keys(playlist).map(function getPlaylists(playlistName) {
             return (
               <Carousel videoIds={playlist[playlistName]}
-                      key={playlistName} />
+                      key={playlistName}
+                      ref={playlistName} />
             );
           })}
         </div>
