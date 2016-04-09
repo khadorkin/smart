@@ -31,7 +31,7 @@ class Img extends Component {
         <div>
           {/* <img src={youtubeIdToUrl(this.props.videoId)} */}
           {/* <img src={this.props.videoId} */}
-          <img src={"http://cdn-lc.gcdn.co/uploads/public/layouts/2015_08_27__12_06_56_WoTX-Xboxlight2-preload-RU/variative_content/RU/header/elements/wot360logo/elements/logo/164296/world-of-tanks-360-edition_1400250758.png"}
+          <img src={this.props.src}
             className={styles.img} />
         </div>
         <div style={materialStyles.paper}>
@@ -50,7 +50,8 @@ Img.propTypes = {
   videoRoute: React.PropTypes.string,
   videoType: React.PropTypes.string,
   description: React.PropTypes.string,
-  title: React.PropTypes.string
+  title: React.PropTypes.string,
+  src: React.PropTypes.string
 };
 
 export default Img;

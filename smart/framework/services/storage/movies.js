@@ -12,8 +12,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -38,8 +38,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -63,8 +63,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -89,8 +89,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -114,8 +114,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -140,8 +140,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -165,8 +165,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -191,8 +191,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -218,8 +218,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -244,8 +244,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -256,54 +256,6 @@ export default (
       }, {
         type: 'ogv',
         url: 'http://media.w3.org/2010/05/sintel/trailer.ogv'
-      }]
-    }, {
-      id: '3',
-      title: 'Elephant\'s Dream',
-      description: 'Elephants Dream is the story of two strange characters exploring a capricious and seemingly infinite machine. The elder, Proog, acts as a tour-guide and protector, happily showing off the sights and dangers of the machine to his initially curious but increasingly skeptical protege Emo. As their journey unfolds we discover signs that the machine is not all Proog thinks it is, and his guiding takes on a more desperate aspect.',
-      meta: {
-        releaseYear: '2006',
-        directors: [{
-          name: 'Bassam Kurdali'
-        }],
-        actors: [{
-          name: 'Cas Jansen'
-        }, {
-          name: 'Tygo Gernandt'
-        }]
-      },
-      images: {
-        cover: '../../../../framework/assets/images/cover-elephantsdream.png',
-        placeholder: '../../../../framework/assets/images/placeholder-elephantsdream-1080p.png'
-      },
-      streams: [{
-        type: 'webm',
-        url: 'http://lachy.id.au/lib/media/elephantsdream/Elephants_Dream-360p-Stereo.webm'
-      }]
-    }, {
-      id: '4',
-      title: 'Sita Sings the Blues',
-      description: 'An animated version of the epic Indian tale of Ramayana set to the 1920s jazz vocals of Annette Hanshaw.',
-      meta: {
-        releaseYear: '2008',
-        directors: [{
-          name: 'Nina Paley'
-        }],
-        actors: [{
-          name: ' Annette Hanshaw'
-        }, {
-          name: 'Aseem Chhabra'
-        }, {
-          name: 'Bhavana Nagulapally'
-        }]
-      },
-      images: {
-        cover: '../../../../framework/assets/images/cover-sitasingstheblues.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sitasingstheblues-1080p.png'
-      },
-      streams: [{
-        type: 'webm',
-        url: 'http://lachy.id.au/lib/media/sitasingstheblues/Sita_Sings_the_Blues-360p-Stereo.webm'
       }]
     }, {
       id: '5',
@@ -317,8 +269,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -343,8 +295,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -355,54 +307,6 @@ export default (
       }, {
         type: 'ogv',
         url: 'http://media.w3.org/2010/05/sintel/trailer.ogv'
-      }]
-    }, {
-      id: '7',
-      title: 'Elephant\'s Dream',
-      description: 'Elephants Dream is the story of two strange characters exploring a capricious and seemingly infinite machine. The elder, Proog, acts as a tour-guide and protector, happily showing off the sights and dangers of the machine to his initially curious but increasingly skeptical protege Emo. As their journey unfolds we discover signs that the machine is not all Proog thinks it is, and his guiding takes on a more desperate aspect.',
-      meta: {
-        releaseYear: '2006',
-        directors: [{
-          name: 'Bassam Kurdali'
-        }],
-        actors: [{
-          name: 'Cas Jansen'
-        }, {
-          name: 'Tygo Gernandt'
-        }]
-      },
-      images: {
-        cover: '../../../../framework/assets/images/cover-elephantsdream.png',
-        placeholder: '../../../../framework/assets/images/placeholder-elephantsdream-1080p.png'
-      },
-      streams: [{
-        type: 'webm',
-        url: 'http://lachy.id.au/lib/media/elephantsdream/Elephants_Dream-360p-Stereo.webm'
-      }]
-    }, {
-      id: '8',
-      title: 'Sita Sings the Blues',
-      description: 'An animated version of the epic Indian tale of Ramayana set to the 1920s jazz vocals of Annette Hanshaw.',
-      meta: {
-        releaseYear: '2008',
-        directors: [{
-          name: 'Nina Paley'
-        }],
-        actors: [{
-          name: ' Annette Hanshaw'
-        }, {
-          name: 'Aseem Chhabra'
-        }, {
-          name: 'Bhavana Nagulapally'
-        }]
-      },
-      images: {
-        cover: '../../../../framework/assets/images/cover-sitasingstheblues.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sitasingstheblues-1080p.png'
-      },
-      streams: [{
-        type: 'webm',
-        url: 'http://lachy.id.au/lib/media/sitasingstheblues/Sita_Sings_the_Blues-360p-Stereo.webm'
       }]
     }, {
       id: '1',
@@ -416,8 +320,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -442,8 +346,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -467,8 +371,8 @@ export default (
         actors: []
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-bigbuckbunny.png',
-        placeholder: '../../../../framework/assets/images/placeholder-bigbuckbunny-1080p.png'
+        cover: require('../../assets/images/cover-bigbuckbunny.png'),
+        placeholder: require('../../assets/images/placeholder-bigbuckbunny-1080p.png')
       },
       streams: [{
         type: 'mp4',
@@ -493,8 +397,8 @@ export default (
         }]
       },
       images: {
-        cover: '../../../../framework/assets/images/cover-sintel.png',
-        placeholder: '../../../../framework/assets/images/placeholder-sintel-1080p.png'
+        cover: require('../../assets/images/cover-sintel.png'),
+        placeholder: require('../../assets/images/placeholder-sintel-1080p.png')
       },
       streams: [{
         type: 'mp4',

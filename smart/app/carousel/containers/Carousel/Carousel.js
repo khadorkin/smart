@@ -10,8 +10,8 @@ import NextArrow from '../../../carouselRightArrow/components/RightArrow/RightAr
 
 const settings = {
   dots: false,
-  infinite: false,
-  speed: 500,
+  infinite: true,
+  speed: 400,
   slidesToShow: 5,
   slidesToScroll: 1,
   adaptiveHeight: true,
@@ -68,6 +68,7 @@ class Carousel extends Component {
   */
 
   renderVideoId(videoSource) {
+    console.log(videoSource);
     return (
       <div key={videoSource.id} >
         <Img videoId={videoSource.id}
@@ -76,6 +77,7 @@ class Carousel extends Component {
              videoType={videoSource.streams[0].type}
              description={videoSource.description}
              title={videoSource.title}
+             src={videoSource.images.cover}
           />
       </div>
     );

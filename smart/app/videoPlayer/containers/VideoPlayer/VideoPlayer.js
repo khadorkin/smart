@@ -105,7 +105,7 @@ class VideoPlayer extends React.Component {
           <img className={styles.mainLogo} src={"http://cdn-lc.gcdn.co/uploads/public/layouts/2015_08_27__12_06_56_WoTX-Xboxlight2-preload-RU/variative_content/RU/header/elements/wot360logo/elements/logo/164296/world-of-tanks-360-edition_1400250758.png"} alt={"World of Tanks"} />
         </h1>
         <div className={styles.mainVideo} >
-          <Video copyKeys={copyKeys} loop mute autoPlay ref={"video"} onProgress={this.onProgress}>
+          <Video copyKeys={copyKeys} loop mute autoPlay ref={"video"} onProgress={this.onProgress} >
             <source src={this.props.videoRoute} type={'video/' + this.props.videoType} />
             <Overlay />
             <Controls />
