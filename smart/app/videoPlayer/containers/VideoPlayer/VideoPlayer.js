@@ -87,14 +87,25 @@ class VideoPlayer extends React.Component {
   }
 
   render() {
+    const copyKeys = {
+      sourceError: this.props.locales.player.sourceError,
+      play: this.props.locales.player.play,
+      pause: this.props.locales.player.pause,
+      mute: this.props.locales.player.mute,
+      unmute: this.props.locales.player.unmute,
+      fullscreen: this.props.locales.player.fullscreen,
+      seek: this.props.locales.player.seek
+    };
+
     const styles = require('./VideoPlayer.scss');
+
     return (
       <div className={styles.main} >
         <h1 className={styles.mainTitle} >
           <img className={styles.mainLogo} src={"http://cdn-lc.gcdn.co/uploads/public/layouts/2015_08_27__12_06_56_WoTX-Xboxlight2-preload-RU/variative_content/RU/header/elements/wot360logo/elements/logo/164296/world-of-tanks-360-edition_1400250758.png"} alt={"World of Tanks"} />
         </h1>
         <div className={styles.mainVideo} >
-          <Video loop mute autoPlay ref={"video"} onProgress={this.onProgress}>
+          <Video copyKeys={copyKeys} loop mute autoPlay ref={"video"} onProgress={this.onProgress}>
             <source src={this.props.videoRoute} type={'video/' + this.props.videoType} />
             <Overlay />
             <Controls />
@@ -108,7 +119,7 @@ class VideoPlayer extends React.Component {
             <ProgressBar />
           </div>
           <div className={styles.mainCol2} >
-            <h2 className={styles.mainH2} >Video Controls</h2>
+            <h2 className={styles.mainH2} >Player Controls</h2>
             <ul className={styles.mainUl} >
               <li>
                 <Button onClick={this.togglePlay}>togglePlay</Button>
@@ -117,30 +128,30 @@ class VideoPlayer extends React.Component {
                 <Button onClick={this.toggleMute}>toggleMute</Button>
               </li>
               <li>
-                <Button onClick={this.fullscreen}>fullscreen</Button>
+                <Button onClick={this.fullscreen}>{this.props.locales.player.fullscreen}</Button>
               </li>
               {/*
               <li>
-                <Button onClick={this.play}>play</Button>
+                <Button onClick={this.play}>{this.props.locales.player.play}</Button>
               </li>
               <li>
-                <Button onClick={this.pause}>pause</Button>
+                <Button onClick={this.pause}>{this.props.locales.player.pause}</Button>
               </li>
               <li>
-                <Button onClick={this.setVolume}>setVolume</Button>
-                <input className={styles.mainInput} defaultValue={"1"} ref={(c) => this._volumeInput = c} type={"number"} min={"0"} max={"1"} step={"0.1"} />
+                <Button onClick={this.mute}>{this.props.locales.player.mute}</Button>
               </li>
               <li>
-                <Button onClick={this.mute}>mute</Button>
+                <Button onClick={this.unmute}>{this.props.locales.player.unmute}</Button>
               </li>
               <li>
-                <Button onClick={this.unmute}>unmute</Button>
-              </li>
-              <li>
-                <Button onClick={this.seek}>seek</Button>
+                <Button onClick={this.seek}>{this.props.locales.player.seek}</Button>
                 <input className={styles.mainInput} defaultValue={"30"} ref={(c) => this._seekInput = c} type={"number"} min={"0"} max={"30"} step={"1"} />
               </li>
               */}
+              <li>
+                <Button onClick={this.setVolume}>{this.props.locales.player.setVolume}</Button>
+                <input className={styles.mainInput} defaultValue={"1"} ref={(c) => this._volumeInput = c} type={"number"} min={"0"} max={"1"} step={"0.1"} />
+              </li>
             </ul>
           </div>
         </div>
@@ -157,5 +168,5 @@ VideoPlayer.propTypes = {
   dispatch: React.PropTypes.func
 };
 
-const translatedVideoPlayer = translate(['app'])(VideoPlayer);
+const translatedVideoPlayer = translate(['player'])(VideoPlayer);
 export default connect(mapStateToProps)(translatedVideoPlayer);

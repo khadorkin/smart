@@ -14,6 +14,17 @@ export default {
     nav: {
       home: 'Home'
     }
+  },
+
+  player: {
+    sourceError: 'Video cannot be played in this browser.',
+    play: 'Play',
+    pause: 'Pause',
+    mute: 'Mute',
+    unmute: 'Unmute',
+    fullscreen: 'Fullscreen',
+    seek: 'Seek',
+    setVolume: 'Set volume'
   }
 
 };
