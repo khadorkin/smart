@@ -1,0 +1,21 @@
+.btn {
+  display: table-cell;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 120, 201, 0.4);
+  width: auto;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.text {
+  position: relative;
+  top: 50%;
+  display: block;
+  height: 30px;
+  margin-top: -15px;
+}

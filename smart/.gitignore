@@ -1,0 +1,11 @@
+.idea/
+nbproject/
+*.sublime-project
+node_modules
+.DS_Store
+dist
+coverage
+*.iml
+webpack-assets.json
+webpack-stats.json
+npm-debug.log

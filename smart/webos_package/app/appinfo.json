@@ -1,0 +1,10 @@
+{
+  "id": "com.yourdomain.app",
+  "version": "0.0.1",
+  "vendor": "ScienceSoft",
+  "type": "web",
+  "main": "index.html",
+  "title": "ScienceSoft Smart TV",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png"
+}

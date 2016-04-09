@@ -1,0 +1,10 @@
+{
+  "id": "smart",
+  "version": "0.0.1",
+  "vendor": "ScienceSoft",
+  "type": "web",
+  "main": "./app/index.html",
+  "title": "Smart TV",
+  "icon": "./icon.png",
+  "largeIcon": "./largeIcon.png"
+}

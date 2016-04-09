@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  height: 50px;
+  font-size: 13px;
+  font-weight: 300;
+  background-color: #dfdfdf;
+  border: 1px solid #c7c7c7;
+  border-radius: 3px;
+  padding: 7px 15px;
+  color: #222;
+  text-decoration: none;
+}
+
+.button:active,
+.button:hover {
+  color: #222;
+  background-color: #c7c7c7;
+}
+
+.buttonActive {
+  color: #fff;
+  background-color: #2492a8;
+  border-color: #0B5665;
+}
+
+.buttonActive:active,
+.buttonActive:hover {
+  color: #fff;
+  background-color: #0B5665;
+}
