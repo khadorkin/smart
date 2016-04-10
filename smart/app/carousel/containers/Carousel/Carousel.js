@@ -25,16 +25,14 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    this.appendOutline();
   }
 
   getCenterElementParams() {
     const centerElement = ReactDom.findDOMNode(this).querySelectorAll('.slick-active')[2];
-    ReactDom.findDOMNode(this).querySelectorAll('.slick-active')[2].setAttribute('style', '2px solid red');
+    const width = centerElement.offsetWidth;
+    const height = centerElement.offsetHeight;
     const top = getCoords(centerElement).top;
     const left = getCoords(centerElement).left;
-    const width = centerElement.clientWidth;
-    const height = centerElement.clientHeight;
     return {
       top: top,
       left: left,
@@ -52,14 +50,17 @@ class Carousel extends Component {
       width: params.width + 'px',
       height: params.height + 'px',
       backgroundColor: 'transparent',
-      outline: '5px solid rgba(0, 120, 201, 0.4)'
+      outline: '8px solid rgba(0, 120, 201, 0.4)',
+      pointerEvents: 'none'
     };
   }
 
   appendOutline() {
+    if (this.highlighted) { ReactDom.findDOMNode(this.highlighted).remove(); }
     const div = document.createElement('DIV');
     setStyle( div, this.createStyles() );
-    ReactDom.findDOMNode(this).appendChild(div);
+    this.highlighted = div;
+    ReactDom.findDOMNode(this).appendChild(this.highlighted);
   }
 
   handleClick(opts) {
@@ -89,7 +90,7 @@ class Carousel extends Component {
 
   renderVideoId(videoSource) {
     return (
-      <div key={videoSource.id} >
+      <div key={videoSource.id}>
         <Img videoId={videoSource.id}
              handleClick={ this.handleClick }
              videoRoute={videoSource.streams[0].url}
@@ -104,6 +105,7 @@ class Carousel extends Component {
   }
 
   render() {
+    const styles = require('./Carousel.scss');
     const settings = {
       dots: false,
       infinite: true,
@@ -119,14 +121,14 @@ class Carousel extends Component {
         { breakpoint: 768, settings: { slidesToShow: 3 } },
         { breakpoint: 1024, settings: { slidesToShow: 5 } }
       ],
-      afterChange: () => {},
+      afterChange: () => {this.appendOutline();},
       beforeChange: () => {},
       nextArrow: NextArrow,
       prevArrow: PrevArrow
     };
     return (
-      <div>
-        <Slider ref={this.props.ref} {...settings}>
+      <div className={styles.root} >
+        <Slider ref={this.props.ref} key={this.props.ref} {...settings}>
           {this.props.videoIds.map(this.renderVideoId)}
         </Slider>
       </div>
