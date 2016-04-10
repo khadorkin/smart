@@ -27,11 +27,12 @@ class MultiCarousel extends Component {
           </div>
         </RollUp>
         <div>
-          {Object.keys(playlist).map(function getPlaylists(playlistName) {
+          {Object.keys(playlist).map(function getPlaylists(playlistName, index) {
             return (
               <Carousel videoIds={playlist[playlistName]}
                       key={playlistName}
-                      ref={playlistName} />
+                      ref={playlistName}
+                      index={index} />
             );
           })}
         </div>

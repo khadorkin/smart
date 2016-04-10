@@ -9,7 +9,8 @@ const initialState = {
   title: '',
   display: 'none',
   added: false,
-  poster: ''
+  poster: '',
+  selectedCarouselIndex: 0
 };
 
 export default function changeRef(state = initialState, action = {}) {
@@ -23,7 +24,8 @@ export default function changeRef(state = initialState, action = {}) {
         title: action.title,
         display: action.display,
         added: action.added,
-        poster: action.poster
+        poster: action.poster,
+        selectedCarouselIndex: action.selectedCarouselIndex
       });
     }
     case 'videoId': {

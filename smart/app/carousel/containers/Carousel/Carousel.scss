@@ -1,8 +1,15 @@
 .root {
   margin: 20px 0;
-  padding: 10px 0;
 }
 
 .highlighted {
    background-color: rgba(0, 120, 201, 0.4);
  }
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}

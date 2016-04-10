@@ -13,7 +13,8 @@ import NextArrow from '../../../carouselRightArrow/components/RightArrow/RightAr
 function mapStateToProps(state) {
   return {
     locales: state.locales,
-    dispatch: state.dispatch
+    dispatch: state.dispatch,
+    selectedCarouselIndex: state.videoPlayer.selectedCarouselIndex
   };
 }
 
@@ -24,17 +25,18 @@ class Carousel extends Component {
     autoBind(this);
   }
 
-  componentDidMount() {
+  componentDidUpdate(prevProps) {
+    if (!(prevProps.index === this.props.index && prevProps.selectedCarouselIndex === this.props.selectedCarouselIndex)) {
+      this.highlightCenteredItem();
+    }
   }
 
   getCenterElementParams() {
     const centerElement = ReactDom.findDOMNode(this).querySelectorAll('.slick-active')[2];
     const width = centerElement.offsetWidth;
     const height = centerElement.offsetHeight;
-    const top = getCoords(centerElement).top;
     const left = getCoords(centerElement).left;
     return {
-      top: top,
       left: left,
       width: width,
       height: height
@@ -45,22 +47,24 @@ class Carousel extends Component {
     const params = this.getCenterElementParams();
     return {
       position: 'absolute',
-      top: params.top + 'px',
+      top: 0,
       left: params.left + 'px',
       width: params.width + 'px',
       height: params.height + 'px',
-      backgroundColor: 'transparent',
-      outline: '8px solid rgba(0, 120, 201, 0.4)',
-      pointerEvents: 'none'
+      backgroundColor: 'rgba(0, 120, 201, 0.07)',
+      pointerEvents: 'none',
+      display: this.props.index === this.props.selectedCarouselIndex ? 'block' : 'none'
     };
   }
 
-  appendOutline() {
+  highlightCenteredItem() {
     if (this.highlighted) { ReactDom.findDOMNode(this.highlighted).remove(); }
+    const slickList = ReactDom.findDOMNode(this).querySelector('.slick-list');
+    slickList.style.position = 'relative';
     const div = document.createElement('DIV');
     setStyle( div, this.createStyles() );
     this.highlighted = div;
-    ReactDom.findDOMNode(this).appendChild(this.highlighted);
+    ReactDom.findDOMNode(slickList).appendChild(this.highlighted);
   }
 
   handleClick(opts) {
@@ -71,7 +75,8 @@ class Carousel extends Component {
       description: opts.description,
       title: opts.title,
       display: opts.display,
-      added: opts.added
+      added: opts.added,
+      selectedCarouselIndex: this.props.index
     });
   }
 
@@ -121,7 +126,7 @@ class Carousel extends Component {
         { breakpoint: 768, settings: { slidesToShow: 3 } },
         { breakpoint: 1024, settings: { slidesToShow: 5 } }
       ],
-      afterChange: () => {this.appendOutline();},
+      afterChange: () => {this.highlightCenteredItem();},
       beforeChange: () => {},
       nextArrow: NextArrow,
       prevArrow: PrevArrow
@@ -142,7 +147,9 @@ Carousel.propTypes = {
   videoIds: PropTypes.arrayOf(
     PropTypes.object
   ).isRequired,
-  ref: PropTypes.string
+  ref: PropTypes.string,
+  index: PropTypes.number,
+  selectedCarouselIndex: PropTypes.number
 };
 
 const translatedCarousel = translate(['app'])(Carousel);

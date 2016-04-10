@@ -14,7 +14,6 @@ class Img extends Component {
     super(props);
   }
 
-// TODO: I tried to pass src as routes to locally stored images, but webpack fails to load them. Failed to find a solution so far. Only remote links work.
   render() {
     const styles = require('./Img.scss');
     const playerParams = {
@@ -29,10 +28,7 @@ class Img extends Component {
     return (
       <div onClick={ () => {this.props.handleClick(playerParams);} }>
         <div>
-          {/* <img src={youtubeIdToUrl(this.props.videoId)} */}
-          {/* <img src={this.props.videoId} */}
-          <img src={this.props.src}
-            className={styles.img} />
+          <img src={this.props.src} className={styles.img} />
         </div>
         <div style={materialStyles.paper}>
           <RaisedButton label={'Play'} />
