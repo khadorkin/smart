@@ -133,7 +133,7 @@ class Carousel extends Component {
     };
     return (
       <div className={styles.root} >
-        <Slider ref={this.props.ref} key={this.props.ref} {...settings}>
+        <Slider ref={this.props.ref} key={this.props.ref} {...settings} >
           {this.props.videoIds.map(this.renderVideoId)}
         </Slider>
       </div>
@@ -154,4 +154,3 @@ Carousel.propTypes = {
 
 const translatedCarousel = translate(['app'])(Carousel);
 export default connect(mapStateToProps)(translatedCarousel);
-
